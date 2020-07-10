@@ -2,4 +2,3 @@
 
 # signal that the import has finsihed
 touch /tmp/finished
-

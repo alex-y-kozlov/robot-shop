@@ -11,6 +11,21 @@ spec:
     targetPort: 8080
   selector:
     service: web
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-external
+  labels:
+    service: web
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    service: web
   type: LoadBalancer
 ---
 apiVersion: apps/v1
@@ -31,7 +46,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: web
+        image: rs-web
         # {{- if .Values.eum.key }}
         # env:
         # - name: INSTANA_EUM_KEY

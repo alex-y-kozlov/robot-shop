@@ -24,4 +24,3 @@ awk '
       else printf format, $1, $2, $3, $4, $6, $7
     }
     ' $1
-

@@ -6,8 +6,28 @@ build:
   # must provide a "default repo" using one of the methods described
   # here:
   # https://skaffold.dev/docs/concepts/#image-repository-handling
-  - image: web
+  - image: rs-web
     context: web
+  - image: rs-user
+    context: user
+  - image: rs-shipping
+    context: shipping
+  - image: rs-ratings
+    context: ratings
+  - image: rs-payment
+    context: payment
+  - image: rs-mysqldb
+    context: mysql
+  - image: rs-mongodb
+    context: mongo
+  - image: rs-load-gen
+    context: load-gen
+  - image: rs-dispatch
+    context: dispatch
+  - image: rs-catalogue
+    context: catalogue
+  - image: rs-cart
+    context: cart
   tagPolicy:
     gitCommit: {}
 deploy:

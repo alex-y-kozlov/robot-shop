@@ -103,4 +103,3 @@ docker run \
     -e "SILENT=$SILENT" \
     -e "ERROR=$ERROR" \
     ${REPO}/rs-load:${TAG}
-
