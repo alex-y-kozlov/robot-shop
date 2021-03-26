@@ -28,5 +28,4 @@ nodeport: false
 openshift: false
 
 redis:
-  storageClass: standard
-
+  storageClass: default
